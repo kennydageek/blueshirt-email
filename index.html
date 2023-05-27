@@ -13,11 +13,50 @@
         padding: 0;
       }
 
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.6rem;
+        font-family: inter, sans-serif;
+      }
+
+      .container {
+        /* width: 30rem; */
+        /* background-color: red; */
+        margin: 0 auto;
+        max-width: 600px;
+        /* width: 300px; */
+      }
+
+      .logo {
+        width: 110px;
+        height: 110px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .banner {
+        padding: 40px 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        background-color: #3968e2;
+      }
+
+      .email-body {
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 68.5px;
+      }
+
       .list-container {
         display: flex;
         justify-content: space-between;
-        padding: 16px;
-        width: 360px;
+        padding: 16px 68.5px;
         /* gap: 18px; */
         /* background-color: red; */
       }
@@ -36,7 +75,6 @@
         align-self: center;
         width: 40px;
         height: 40px;
-        object-fit: cover;
         border-radius: 50%;
       }
 
@@ -74,17 +112,61 @@
         align-self: center;
       }
 
-      .center-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .footer {
+        margin-top: 80px;
+        padding: 24px;
+        text-align: center;
+        background-color: #f5f8fd;
       }
 
-      /* Center-list centers all the list item */
+      .footer p {
+        color: #131f38;
+        font-size: 16px;
+      }
+
+      .footer p a {
+        color: #131f38;
+      }
+
+      .footer p:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+
+      .copy {
+        padding: 70px 39px 34px;
+      }
+
+      .copy p {
+        color: #9cb4f1;
+      }
+      .copy p a {
+        color: #9cb4f1;
+      }
+
+      @media screen and (max-width: 450px) {
+        .email-body {
+          padding: 0 20.5px;
+        }
+
+        .list-container {
+          padding: 16px 20.5px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="center-list">
+    <div class="container">
+      <img src="./logo.svg" alt="" class="logo" />
+      <div class="banner">
+        <p>Unlock Job opportunities</p>
+      </div>
+      <div class="email-body">
+        <p class="greet">
+          Dear [User's Name],<br /><br />
+          Connect with experienced coaches and HRs for tailored guidance. Get
+          empowered, gain insights, and find your perfect job!
+        </p>
+      </div>
       <div class="list-container">
         <div class="img-n-job">
           <img src="./Bollard.svg" alt="" />
@@ -128,6 +210,20 @@
         </div>
         <button class="cta">Connect</button>
       </div>
+      <footer class="footer">
+        <p>
+          Need more help figuring things out? Our support team is here to help!
+        </p>
+        <p><a href="#">Terms and Conditions</a></p>
+
+        <div class="copy">
+          <p>
+            Copyright © 2023 BlueShirt, All rights reserved<br /><br />
+            U302 , Cinderella Building, 825 EDSA, Quezon City, Philippines<br /><br />
+            <a href="https://blueshirt.work/">https://blueshirt.work/</a>
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
